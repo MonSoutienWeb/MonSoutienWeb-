@@ -62,18 +62,19 @@
         <a href="#presentation" class="btn">Découvrir</a>
     </header>
 
-<main class="container mx-auto mt-8 px-4">
+   <main class="container mx-auto mt-8 px-4">
         <!-- Présentation -->
         <section id="presentation" class="section">
             <h2 class="text-3xl font-bold text-blue-600 mb-4">Qui sommes-nous ?</h2>
             <p class="text-lg">
                 MonSoutienWeb est une plateforme dédiée à l'apprentissage personnalisé et au soutien scolaire en ligne.
-                Nous offrons des cours particuliers adaptés aux besoins individuels des élèves, qu'il s'agisse d'aide aux devoirs,
+                Nous offrons exclusivement des cours particuliers dans les matières suivantes : <strong>mathématiques</strong>, <strong>physique</strong>, <strong>SVT</strong>, et <strong>anglais</strong>.
+                Nos services sont conçus pour répondre aux besoins individuels des élèves, qu'il s'agisse d'aide aux devoirs,
                 de rattrapage scolaire ou de perfectionnement dans une matière spécifique.
-                Grâce à nos services en ligne, nous connectons les élèves avec des enseignants qualifiés pour un accompagnement flexible et efficace.
+                Grâce à nos cours en ligne, nous connectons les élèves avec des enseignants qualifiés pour un accompagnement flexible et efficace.
             </p>
         </section>
- <!-- Fonctionnement -->
+   <!-- Fonctionnement -->
         <section id="fonctionnement" class="section">
             <h2 class="text-3xl font-bold text-blue-600 mb-4">Comment ça marche ?</h2>
             <p class="text-lg mb-4">
@@ -94,21 +95,22 @@
                 Ce format assure un apprentissage progressif et adapté aux besoins spécifiques de chaque élève, tout en offrant un cadre d'échange bienveillant.
             </p>
         </section>
-    <!-- Présentation des enseignants -->
-        <section id="team" class="section">
-            <h2 class="text-3xl font-bold text-blue-600 mb-4">Rencontrez notre équipe</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="card">
-                    <h3 class="text-xl font-semibold mb-2">Garance</h3>
-                    <p>Étudiante en école vétérinaire, Garance est spécialisée dans les cours d'anglais. Grâce à son expérience internationale, elle aide les élèves à développer leurs compétences linguistiques et leur confiance en anglais.</p>
+    <!-- Connexion utilisateur -->
+        <section id="connexion" class="section">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">Se connecter</h2>
+            <form id="login-form" class="space-y-4">
+                <div>
+                    <label for="username" class="block text-sm font-medium">Nom d'utilisateur :</label>
+                    <input type="text" id="username" name="username" class="w-full p-2 border rounded" placeholder="Entrez votre nom d'utilisateur" required>
                 </div>
-                <div class="card">
-                    <h3 class="text-xl font-semibold mb-2">Basile</h3>
-                    <p>Actuellement en deuxième année d'école vétérinaire, Basile est expert en mathématiques, physique et SVT. Ayant suivi une classe préparatoire BCPST et avec 3 ans d'expérience en cours particuliers, il accompagne efficacement les élèves dans ces matières exigeantes.</p>
+                <div>
+                    <label for="password" class="block text-sm font-medium">Mot de passe :</label>
+                    <input type="password" id="password" name="password" class="w-full p-2 border rounded" placeholder="Entrez votre mot de passe" required>
                 </div>
-            </div>
+                <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Se connecter</button>
+            </form>
         </section>
-    <!-- Tarifs -->
+   <!-- Tarifs -->
         <section id="tarifs" class="section">
             <h2 class="text-3xl font-bold text-blue-600 mb-4">Tarifs et horaires</h2>
             <p class="text-lg mb-4">
@@ -125,7 +127,7 @@
                 Ces créneaux de deux heures permettent un apprentissage intensif et structuré, pour des résultats concrets en un minimum de temps.
             </p>
         </section>
-    <!-- Première heure gratuite -->
+     <!-- Première heure gratuite -->
         <section id="free-trial" class="section">
             <h2 class="text-3xl font-bold text-blue-600 mb-4">Essayez sans engagement</h2>
             <p class="text-lg">
@@ -135,54 +137,16 @@
                 Profitez de cette opportunité pour découvrir nos méthodes, notre structure et la qualité de nos enseignants sans aucun engagement. Si nos cours vous plaisent, nous serons ravis de continuer à vous accompagner !
             </p>
         </section>
-      <!-- Commentaires -->
+     <!-- Contact -->
+        <section id="contact" class="section">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">Nous contacter</h2>
+            <p class="text-lg mb-4">Pour toute question ou information supplémentaire, n'hésitez pas à nous contacter :</p>
+            <ul class="list-disc pl-6 text-lg">
+                <li><strong>Email :</strong> contact@monsoutienweb.com</li>
+                <li><strong>Téléphone :</strong> +33 6 12 34 56 78</li>
+            </ul>
+        </section>
+   <!-- Commentaires -->
         <section id="user-comments" class="section">
             <h2 class="text-3xl font-bold text-blue-600 mb-4">Ce que disent nos utilisateurs</h2>
-            <div id="comments-list" class="space-y-4">
-                <!-- Les commentaires seront affichés ici -->
-            </div>
-            <form id="comment-form" class="mt-4">
-                <label for="comment" class="block text-sm font-medium">Votre avis :</label>
-                <textarea id="comment" class="w-full p-2 border rounded mb-2" rows="4" placeholder="Laissez un commentaire..."></textarea>
-                <button class="btn">Envoyer</button>
-            </form>
-        </section>
-    </main>
-  <footer class="bg-blue-600 text-white py-4 mt-8">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2025 MonSoutienWeb. Tous droits réservés.</p>
-        </div>
-    </footer>
-
-<script>
-        const commentsList = document.getElementById('comments-list');
-        const commentForm = document.getElementById('comment-form');
-        const commentInput = document.getElementById('comment');
-
-        function updateCommentsDisplay() {
-            commentsList.innerHTML = '';
-            const comments = JSON.parse(localStorage.getItem('comments') || '[]');
-            comments.forEach(comment => {
-                const commentElement = document.createElement('div');
-                commentElement.classList.add('card');
-                commentElement.innerHTML = `<p>${comment}</p>`;
-                commentsList.appendChild(commentElement);
-            });
-        }
-
-        commentForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const commentText = commentInput.value.trim();
-            if (commentText) {
-                const comments = JSON.parse(localStorage.getItem('comments') || '[]');
-                comments.push(commentText);
-                localStorage.setItem('comments', JSON.stringify(comments));
-                commentInput.value = '';
-                updateCommentsDisplay();
-            }
-        });
-
-        updateCommentsDisplay();
-    </script>
-</body>
-</html>
+           
