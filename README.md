@@ -7,60 +7,57 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: #fefefe;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
-        header {
+header {
             background: #FF924D;
             color: white;
             text-align: center;
             padding: 4rem 2rem;
-            border-bottom-left-radius: 50% 10%;
-            border-bottom-right-radius: 50% 10%;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
-        header h1 {
-            font-size: 3rem;
+    header h1 {
+            font-size: 3.5rem;
             font-weight: bold;
         }
-        header p {
+header p {
             font-size: 1.25rem;
             margin-top: 1rem;
         }
-        .section {
-            padding: 4rem 2rem;
+   section {
+            padding: 3rem 2rem;
         }
-        .section:nth-child(even) {
-            background: #f0f4f8;
+        .services {
+            background: #FFFFFF;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            text-align: center;
         }
-        .wave {
+.services .card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+  .services .card:hover {
+            transform: translateY(-10px);
+        }
+.wave {
             position: relative;
-            margin-top: -5rem;
-            z-index: 1;
         }
-        .wave svg {
+   .wave svg {
             display: block;
             width: 100%;
             height: auto;
         }
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .card {
-            background: white;
-            border-radius: 1rem;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            text-align: center;
-            transition: transform 0.2s;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-        }
-        footer {
-            text-align: center;
+footer {
             background: #03444A;
             color: white;
+            text-align: center;
             padding: 2rem;
         }
     </style>
@@ -71,65 +68,49 @@
         <p>Votre partenaire de confiance pour les cours particuliers et le soutien scolaire en ligne</p>
     </header>
 
-  <section class="section">
-        <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Qui sommes-nous ?</h2>
-        <div class="text-lg text-center">
-            <p>
-                MonSoutienWeb est une plateforme dédiée à l'apprentissage personnalisé et au soutien scolaire en ligne.
-                Nous offrons exclusivement des cours particuliers dans les matières suivantes : <strong>mathématiques</strong>, <strong>physique</strong>, <strong>SVT</strong>, et <strong>anglais</strong>.
-                Nos services sont conçus pour répondre aux besoins individuels des élèves, qu'il s'agisse d'aide aux devoirs,
-                de rattrapage scolaire ou de perfectionnement dans une matière spécifique.
-                Grâce à nos cours en ligne, nous connectons les élèves avec des enseignants qualifiés pour un accompagnement flexible et efficace.
+ <section class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FF924D" fill-opacity="1" d="M0,160L30,170.7C60,181,120,203,180,192C240,181,300,139,360,122.7C420,107,480,117,540,112C600,107,660,85,720,85.3C780,85,840,107,900,138.7C960,171,1020,213,1080,202.7C1140,192,1200,128,1260,112C1320,96,1380,128,1410,144L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
+    </section>
+
+<section>
+    <h2 class="text-3xl font-bold text-center mb-8">Qui sommes-nous ?</h2>
+        <p class="text-lg text-center max-w-4xl mx-auto">
+            MonSoutienWeb est une plateforme dédiée à l'apprentissage personnalisé et au soutien scolaire en ligne.
+            Nous offrons exclusivement des cours particuliers dans les matières suivantes : <strong>mathématiques</strong>,
+            <strong>physique</strong>, <strong>SVT</strong>, et <strong>anglais</strong>. Nos services sont conçus pour répondre
+            aux besoins individuels des élèves, qu'il s'agisse d'aide aux devoirs, de rattrapage scolaire ou de perfectionnement
+            dans une matière spécifique.
+        </p>
+    </section>
+
+<section class="services">
+        <div class="card">
+            <h3 class="text-xl font-bold">Comment ça marche ?</h3>
+            <p class="text-md mt-4">
+                Les cours en ligne se déroulent sur l'application WhatsApp, permettant une interaction facile et accessible
+                pour tous. Chaque session regroupe jusqu'à <strong>6 élèves</strong>, mais chaque élève échange en privé avec
+                le professeur particulier, offrant une attention personnalisée.
+            </p>
+        </div>
+
+  <div class="card">
+            <h3 class="text-xl font-bold">Tarifs et horaires</h3>
+            <p class="text-md mt-4">
+                Tarif unique de <strong>15 euros par heure</strong>. Les cours sont dispensés exclusivement les week-ends,
+                de 8h à 10h et de 10h15 à 12h15.
+            </p>
+        </div>
+    <div class="card">
+            <h3 class="text-xl font-bold">Premier cours gratuit</h3>
+            <p class="text-md mt-4">
+                La première heure de cours est <strong>entièrement gratuite</strong>. Profitez-en pour découvrir nos méthodes
+                et la qualité de nos enseignants sans aucun engagement.
             </p>
         </div>
     </section>
 
-   <div class="wave">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FF924D" fill-opacity="1" d="M0,160L30,170.7C60,181,120,203,180,192C240,181,300,139,360,122.7C420,107,480,117,540,112C600,107,660,85,720,85.3C780,85,840,107,900,138.7C960,171,1020,213,1080,202.7C1140,192,1200,128,1260,112C1320,96,1380,128,1410,144L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
-    </div>
-    <section class="section">
-        <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Comment ça marche ?</h2>
-        <p class="text-lg mb-4 text-center">
-            Les cours en ligne se déroulent sur l'application WhatsApp, permettant une interaction facile et accessible pour tous.
-            Chaque session regroupe jusqu'à <strong>6 élèves</strong>, mais chaque élève échange en privé avec le professeur particulier, offrant une attention personnalisée.
-            Afin de minimiser le stress des élèves, les cours se déroulent <strong>sans caméra</strong>, créant un environnement d'apprentissage plus confortable et serein.
-        </p>
-        <ul class="list-disc pl-8 text-lg">
-            <li><strong>Explication du cours :</strong> Le professeur revoit les notions non comprises par l'élève et clarifie les points difficiles.</li>
-            <li><strong>Application :</strong> Les élèves s'entraînent sur des exercices, accompagnés et guidés par le professeur pour garantir une compréhension approfondie.</li>
-        </ul>
-    </section>
-
-   <section class="section">
-        <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Tarifs et horaires</h2>
-        <p class="text-lg text-center">
-            Tarif unique : <strong>15 euros par heure</strong>. Cours le week-end de 8h à 10h et de 10h15 à 12h15.
-        </p>
-    </section>
-    <section class="section">
-        <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Essayez sans engagement</h2>
-        <p class="text-lg text-center">
-            Nous croyons en la qualité de notre accompagnement, et nous voulons que vous puissiez en juger par vous-même. C'est pourquoi le <strong>premier cours est entièrement gratuit</strong>.
-            Profitez de cette opportunité pour découvrir nos méthodes, notre structure et la qualité de nos enseignants sans aucun engagement.
-        </p>
-    </section>
-    <section class="section">
-        <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Nous contacter</h2>
-        <p class="text-lg text-center">
-            Pour toute question, demande d'information ou prise de rendez-vous, contactez-nous à l'adresse email ci-dessous :
-        </p>
-        <p class="text-lg text-center font-bold">contact@monsoutienweb.com</p>
-    </section>
-
-  <section class="section">
-        <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Ce que disent nos utilisateurs</h2>
-        <div class="text-lg text-center">
-            <!-- Espace pour commentaires des utilisateurs -->
-            <p>Laissez un avis ou lisez les expériences des autres utilisateurs.</p>
-        </div>
-    </section>
-
    <footer>
+        <p>Contactez-nous à <strong>contact@monsoutienweb.com</strong></p>
         <p>&copy; 2025 MonSoutienWeb. Tous droits réservés.</p>
     </footer>
 </body>
