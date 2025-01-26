@@ -1,0 +1,72 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Visio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <header class="bg-blue-600 text-white py-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Bienvenue sur notre site</h1>
+            <p class="text-lg mt-2">Une solution unique pour vos besoins de visio</p>
+        </div>
+    </header>
+
+  <main class="container mx-auto mt-8 px-4">
+       <!-- Présentation -->
+        <section id="presentation" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4">Présentation</h2>
+            <p id="intro-message">[Message de présentation et objectif du site à détailler]</p>
+        </section>
+  <!-- Fonctionnement de la Visio -->
+        <section id="fonctionnement" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4">Fonctionnement de la Visio</h2>
+            <p id="visio-details">[Description du fonctionnement à compléter]</p>
+        </section>
+    <!-- Présentation des personnels -->
+        <section id="personnel" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4">Notre Équipe</h2>
+            <div id="team-members" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-100 p-4 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold">[Nom du personnel 1]</h3>
+                    <p>[Description du personnel 1]</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold">[Nom du personnel 2]</h3>
+                    <p>[Description du personnel 2]</p>
+                </div>
+            </div>
+        </section>
+  <!-- Tarifs -->
+        <section id="tarifs" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4">Tarifs</h2>
+            <p>Notre tarif est de <strong>15 euros par heure</strong>.</p>
+        </section>
+    <!-- Contact et commentaires -->
+        <section id="contact" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4">Contactez-nous</h2>
+            <form id="contact-form" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium">Nom :</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 border rounded" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium">Email :</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border rounded" required>
+                </div>
+                <div>
+                    <label for="comment" class="block text-sm font-medium">Commentaire :</label>
+                    <textarea id="comment" name="comment" class="w-full p-2 border rounded" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <footer class="bg-blue-600 text-white py-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Projet Visio. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
