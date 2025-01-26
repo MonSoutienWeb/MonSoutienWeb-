@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +7,21 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(to bottom, #cce7ff, #ffffff);
+            background: linear-gradient(to bottom, #E66414, #FF924D, #9AD3DA, #00A8A8, #03444A);
+            background-size: cover;
+            position: relative;
+            font-family: 'Arial', sans-serif;
+        }
+         body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://via.placeholder.com/1920x1080.png?text=shapes'); /* Replace with actual shapes or custom SVG shapes */
+            opacity: 0.3;
+            z-index: -1;
         }
         .section {
             padding: 4rem 2rem;
@@ -53,16 +68,54 @@
         .card:hover {
             transform: translateY(-10px);
         }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #6f86d6;
+            color: white;
+            padding: 1rem 0;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #48c6ef;
+        }
     </style>
 </head>
 <body class="font-sans leading-normal tracking-normal">
-    <header class="hero">
+    <nav>
+        <ul>
+            <li><a href="#presentation">Présentation</a></li>
+            <li><a href="#fonctionnement">Comment ça marche</a></li>
+            <li><a href="#tarifs">Tarifs et horaires</a></li>
+            <li><a href="#free-trial">Premier cours gratuit</a></li>
+            <li><a href="#contact">Nous contacter</a></li>
+            <li><a href="#user-comments">Commentaires</a></li>
+        </ul>
+    </nav>
+
+ <header class="hero mt-16">
         <h1>Bienvenue sur MonSoutienWeb</h1>
         <p>Votre partenaire de confiance pour les cours particuliers et le soutien scolaire en ligne</p>
         <a href="#presentation" class="btn">Découvrir</a>
     </header>
 
-<main class="container mx-auto mt-8 px-4">
+   <main class="container mx-auto mt-8 px-4">
         <!-- Présentation -->
         <section id="presentation" class="section">
             <h2 class="text-3xl font-bold text-blue-600 mb-4">Qui sommes-nous ?</h2>
@@ -74,7 +127,7 @@
                 Grâce à nos cours en ligne, nous connectons les élèves avec des enseignants qualifiés pour un accompagnement flexible et efficace.
             </p>
         </section>
-   <!-- Fonctionnement -->
+    <!-- Fonctionnement -->
         <section id="fonctionnement" class="section">
             <h2 class="text-3xl font-bold text-blue-600 mb-4">Comment ça marche ?</h2>
             <p class="text-lg mb-4">
@@ -95,7 +148,7 @@
                 Ce format assure un apprentissage progressif et adapté aux besoins spécifiques de chaque élève, tout en offrant un cadre d'échange bienveillant.
             </p>
         </section>
-   <!-- Tarifs -->
+     <!-- Tarifs -->
         <section id="tarifs" class="section">
             <h2 class="text-3xl font-bold text-blue-600 mb-4">Tarifs et horaires</h2>
             <p class="text-lg mb-4">
@@ -112,11 +165,11 @@
                 Ces créneaux de deux heures permettent un apprentissage intensif et structuré, pour des résultats concrets en un minimum de temps.
             </p>
         </section>
-     <!-- Première heure gratuite -->
+   <!-- Première cours gratuit -->
         <section id="free-trial" class="section">
             <h2 class="text-3xl font-bold text-blue-600 mb-4">Essayez sans engagement</h2>
             <p class="text-lg">
-                Nous croyons en la qualité de notre accompagnement, et nous voulons que vous puissiez en juger par vous-même. C'est pourquoi la <strong>première heure de cours est entièrement gratuite</strong>.
+                Nous croyons en la qualité de notre accompagnement, et nous voulons que vous puissiez en juger par vous-même. C'est pourquoi le <strong>premier cours est entièrement gratuit</strong>.
             </p>
             <p class="text-lg">
                 Profitez de cette opportunité pour découvrir nos méthodes, notre structure et la qualité de nos enseignants sans aucun engagement. Si nos cours vous plaisent, nous serons ravis de continuer à vous accompagner !
@@ -125,61 +178,35 @@
     <!-- Contact -->
         <section id="contact" class="section">
             <h2 class="text-3xl font-bold text-blue-600 mb-4">Nous contacter</h2>
-            <p class="text-lg mb-4">Pour toute question, contactez-nous :</p>
+            <p class="text-lg mb-4">Pour toute question, demande d'information ou prise de rendez-vous, contactez-nous à l'adresse email ci-dessous :</p>
             <ul class="list-disc pl-6 text-lg">
                 <li><strong>Email :</strong> contact@monsoutienweb.com</li>
-                <li><strong>Téléphone :</strong> +33 6 12 34 56 78</li>
             </ul>
         </section>
-     <!-- Commentaires -->
+ <!-- Commentaires -->
         <section id="user-comments" class="section">
             <h2 class="text-3xl font-bold text-blue-600 mb-4">Ce que disent nos utilisateurs</h2>
             <div id="comments-list" class="space-y-4">
                 <!-- Les commentaires seront affichés ici -->
             </div>
-            <form id="comment-form" class="mt-4">
-                <label for="comment" class="block text-sm font-medium">Votre avis :</label>
-                <textarea id="comment" class="w-full p-2 border rounded mb-2" rows="4" placeholder="Laissez un commentaire..."></textarea>
-                <button class="btn">Envoyer</button>
-            </form>
-        </section>
-    </main>
+            <form id="comment-formbody {
+    background: linear-gradient(to bottom, #E66414, #FF924D, #9AD3DA, #00A8A8, #03444A);
+    background-size: cover;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+}
 
-   <footer class="bg-blue-600 text-white py-4 mt-8">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2025 MonSoutienWeb. Tous droits réservés.</p>
-        </div>
-    </footer>
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><rect x="0" y="0" width="50" height="50" fill="rgba(255, 255, 255, 0.1)" /><circle cx="75" cy="75" r="25" fill="rgba(255, 255, 255, 0.2)" /><polygon points="50,0 100,0 75,50" fill="rgba(255, 255, 255, 0.15)" /></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: -1;
+}
 
-   <script>
-        const commentsList = document.getElementById('comments-list');
-        const commentForm = document.getElementById('comment-form');
-        const commentInput = document.getElementById('comment');
-
-        function updateCommentsDisplay() {
-            commentsList.innerHTML = '';
-            const comments = JSON.parse(localStorage.getItem('comments') || '[]');
-            comments.forEach(comment => {
-                const commentElement = document.createElement('div');
-                commentElement.classList.add('card');
-                commentElement.innerHTML = `<p>${comment}</p>`;
-                commentsList.appendChild(commentElement);
-            });
-        }
-
-        commentForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const commentText = commentInput.value.trim();
-            if (commentText) {
-                const comments = JSON.parse(localStorage.getItem('comments') || '[]');
-                comments.push(commentText);
-                localStorage.setItem('comments', JSON.stringify(comments));
-                commentInput.value = '';
-                updateCommentsDisplay();
-            }
-        });
-
-        updateCommentsDisplay();
-    </script>
-</body>
-</html>
