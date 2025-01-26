@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -80,38 +79,57 @@
                 Nous offrons exclusivement des cours particuliers dans les matières suivantes : <strong>mathématiques</strong>, <strong>physique</strong>, <strong>SVT</strong>, et <strong>anglais</strong>.
                 Nos services sont conçus pour répondre aux besoins individuels des élèves, qu'il s'agisse d'aide aux devoirs,
                 de rattrapage scolaire ou de perfectionnement dans une matière spécifique.
+                Grâce à nos cours en ligne, nous connectons les élèves avec des enseignants qualifiés pour un accompagnement flexible et efficace.
             </p>
         </div>
     </section>
 
- <div class="wave">
+   <div class="wave">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FF924D" fill-opacity="1" d="M0,160L30,170.7C60,181,120,203,180,192C240,181,300,139,360,122.7C420,107,480,117,540,112C600,107,660,85,720,85.3C780,85,840,107,900,138.7C960,171,1020,213,1080,202.7C1140,192,1200,128,1260,112C1320,96,1380,128,1410,144L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
     </div>
-
- <section class="section">
+    <section class="section">
         <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Comment ça marche ?</h2>
+        <p class="text-lg mb-4 text-center">
+            Les cours en ligne se déroulent sur l'application WhatsApp, permettant une interaction facile et accessible pour tous.
+            Chaque session regroupe jusqu'à <strong>6 élèves</strong>, mais chaque élève échange en privé avec le professeur particulier, offrant une attention personnalisée.
+            Afin de minimiser le stress des élèves, les cours se déroulent <strong>sans caméra</strong>, créant un environnement d'apprentissage plus confortable et serein.
+        </p>
         <ul class="list-disc pl-8 text-lg">
             <li><strong>Explication du cours :</strong> Le professeur revoit les notions non comprises par l'élève et clarifie les points difficiles.</li>
             <li><strong>Application :</strong> Les élèves s'entraînent sur des exercices, accompagnés et guidés par le professeur pour garantir une compréhension approfondie.</li>
         </ul>
     </section>
 
- <section class="section">
+   <section class="section">
         <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Tarifs et horaires</h2>
         <p class="text-lg text-center">
             Tarif unique : <strong>15 euros par heure</strong>. Cours le week-end de 8h à 10h et de 10h15 à 12h15.
         </p>
     </section>
-
- <section class="section">
+    <section class="section">
         <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Essayez sans engagement</h2>
         <p class="text-lg text-center">
-            La première heure de cours est <strong>entièrement gratuite</strong>.
+            Nous croyons en la qualité de notre accompagnement, et nous voulons que vous puissiez en juger par vous-même. C'est pourquoi le <strong>premier cours est entièrement gratuit</strong>.
+            Profitez de cette opportunité pour découvrir nos méthodes, notre structure et la qualité de nos enseignants sans aucun engagement.
         </p>
     </section>
+    <section class="section">
+        <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Nous contacter</h2>
+        <p class="text-lg text-center">
+            Pour toute question, demande d'information ou prise de rendez-vous, contactez-nous à l'adresse email ci-dessous :
+        </p>
+        <p class="text-lg text-center font-bold">contact@monsoutienweb.com</p>
+    </section>
 
-  <footer>
-        <p>Contactez-nous à <strong>contact@monsoutienweb.com</strong></p>
+  <section class="section">
+        <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Ce que disent nos utilisateurs</h2>
+        <div class="text-lg text-center">
+            <!-- Espace pour commentaires des utilisateurs -->
+            <p>Laissez un avis ou lisez les expériences des autres utilisateurs.</p>
+        </div>
+    </section>
+
+   <footer>
         <p>&copy; 2025 MonSoutienWeb. Tous droits réservés.</p>
     </footer>
 </body>
